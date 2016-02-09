@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NOCache.h"
+#import "NOPersistentStore.h"
 //! Project version number for Cashier.
 FOUNDATION_EXPORT double CashierVersionNumber;
 

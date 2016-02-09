@@ -112,9 +112,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				272F1D941C6A31CD0098F620 /* NOPersistentStore.h in Headers */,
-				272F1D901C6A31C50098F620 /* NSString+MD5Addition.h in Headers */,
-				272F1D8C1C6A31BC0098F620 /* NOCache.h in Headers */,
 				272F1D741C6A315E0098F620 /* Cashier.h in Headers */,
+				272F1D8C1C6A31BC0098F620 /* NOCache.h in Headers */,
+				272F1D901C6A31C50098F620 /* NSString+MD5Addition.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +398,7 @@
 				272F1D861C6A315E0098F620 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		272F1D871C6A315E0098F620 /* Build configuration list for PBXNativeTarget "CashierTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +407,7 @@
 				272F1D891C6A315E0098F620 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
