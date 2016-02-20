@@ -65,5 +65,5 @@ static NSTimeInterval const NOCacheDateNotFound = 0;
 - (NSTimeInterval)lastUpdateTimeForKey:(NSString *)key;
 
 - (void)deleteObjectForKey:(NSString *)key;
-
+- (NSString *)URLEncodedFilenameFromString:(NSString *)string;
 @end

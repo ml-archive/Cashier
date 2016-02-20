@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		272F1D741C6A315E0098F620 /* Cashier.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D731C6A315E0098F620 /* Cashier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		272F1D7B1C6A315E0098F620 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F1D701C6A315E0098F620 /* Cashier.framework */; };
-		272F1D801C6A315E0098F620 /* CashierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D7F1C6A315E0098F620 /* CashierTests.m */; };
-		272F1D8C1C6A31BC0098F620 /* NOCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8A1C6A31BC0098F620 /* NOCache.h */; };
+		272F1D8C1C6A31BC0098F620 /* NOCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8A1C6A31BC0098F620 /* NOCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		272F1D8D1C6A31BC0098F620 /* NOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D8B1C6A31BC0098F620 /* NOCache.m */; };
 		272F1D901C6A31C50098F620 /* NSString+MD5Addition.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8E1C6A31C50098F620 /* NSString+MD5Addition.h */; };
 		272F1D911C6A31C50098F620 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D8F1C6A31C50098F620 /* NSString+MD5Addition.m */; };
-		272F1D941C6A31CD0098F620 /* NOPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D921C6A31CD0098F620 /* NOPersistentStore.h */; };
+		272F1D941C6A31CD0098F620 /* NOPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D921C6A31CD0098F620 /* NOPersistentStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		272F1D951C6A31CD0098F620 /* NOPersistentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D931C6A31CD0098F620 /* NOPersistentStore.m */; };
+		27DFB9EF1C78CFDD00257D86 /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFB9EE1C78CFDD00257D86 /* PersistentStore.swift */; };
+		27DFB9F21C78D03200257D86 /* PersistentStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFB9F11C78D03200257D86 /* PersistentStoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +34,6 @@
 		272F1D731C6A315E0098F620 /* Cashier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cashier.h; sourceTree = "<group>"; };
 		272F1D751C6A315E0098F620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		272F1D7A1C6A315E0098F620 /* CashierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CashierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		272F1D7F1C6A315E0098F620 /* CashierTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CashierTests.m; sourceTree = "<group>"; };
 		272F1D811C6A315E0098F620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		272F1D8A1C6A31BC0098F620 /* NOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOCache.h; sourceTree = "<group>"; };
 		272F1D8B1C6A31BC0098F620 /* NOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOCache.m; sourceTree = "<group>"; };
@@ -41,6 +41,9 @@
 		272F1D8F1C6A31C50098F620 /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
 		272F1D921C6A31CD0098F620 /* NOPersistentStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOPersistentStore.h; sourceTree = "<group>"; };
 		272F1D931C6A31CD0098F620 /* NOPersistentStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOPersistentStore.m; sourceTree = "<group>"; };
+		27DFB9EE1C78CFDD00257D86 /* PersistentStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
+		27DFB9F01C78D03200257D86 /* CashierTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CashierTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		27DFB9F11C78D03200257D86 /* PersistentStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 		272F1D721C6A315E0098F620 /* Cashier */ = {
 			isa = PBXGroup;
 			children = (
+				27DFB9ED1C78CFCA00257D86 /* Source */,
 				272F1D8A1C6A31BC0098F620 /* NOCache.h */,
 				272F1D8B1C6A31BC0098F620 /* NOCache.m */,
 				272F1D8E1C6A31C50098F620 /* NSString+MD5Addition.h */,
@@ -98,10 +102,27 @@
 		272F1D7E1C6A315E0098F620 /* CashierTests */ = {
 			isa = PBXGroup;
 			children = (
-				272F1D7F1C6A315E0098F620 /* CashierTests.m */,
-				272F1D811C6A315E0098F620 /* Info.plist */,
+				27DFB9F31C78D3AF00257D86 /* Supporting Files */,
+				27DFB9F11C78D03200257D86 /* PersistentStoreTests.swift */,
 			);
 			path = CashierTests;
+			sourceTree = "<group>";
+		};
+		27DFB9ED1C78CFCA00257D86 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				27DFB9EE1C78CFDD00257D86 /* PersistentStore.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		27DFB9F31C78D3AF00257D86 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27DFB9F01C78D03200257D86 /* CashierTests-Bridging-Header.h */,
+				272F1D811C6A315E0098F620 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +237,7 @@
 			files = (
 				272F1D911C6A31C50098F620 /* NSString+MD5Addition.m in Sources */,
 				272F1D8D1C6A31BC0098F620 /* NOCache.m in Sources */,
+				27DFB9EF1C78CFDD00257D86 /* PersistentStore.swift in Sources */,
 				272F1D951C6A31CD0098F620 /* NOPersistentStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,7 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				272F1D801C6A315E0098F620 /* CashierTests.m in Sources */,
+				27DFB9F21C78D03200257D86 /* PersistentStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +352,7 @@
 		272F1D851C6A315E0098F620 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -340,12 +363,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		272F1D861C6A315E0098F620 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -362,20 +387,25 @@
 		272F1D881C6A315E0098F620 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CashierTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.CashierTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CashierTests/CashierTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		272F1D891C6A315E0098F620 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CashierTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.CashierTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CashierTests/CashierTests-Bridging-Header.h";
 			};
 			name = Release;
 		};
