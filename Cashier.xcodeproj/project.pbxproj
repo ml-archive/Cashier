@@ -10,11 +10,11 @@
 		272F1D741C6A315E0098F620 /* Cashier.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D731C6A315E0098F620 /* Cashier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		272F1D7B1C6A315E0098F620 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F1D701C6A315E0098F620 /* Cashier.framework */; };
 		272F1D801C6A315E0098F620 /* CashierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D7F1C6A315E0098F620 /* CashierTests.m */; };
-		272F1D8C1C6A31BC0098F620 /* NOCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8A1C6A31BC0098F620 /* NOCache.h */; };
+		272F1D8C1C6A31BC0098F620 /* NOCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8A1C6A31BC0098F620 /* NOCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		272F1D8D1C6A31BC0098F620 /* NOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D8B1C6A31BC0098F620 /* NOCache.m */; };
 		272F1D901C6A31C50098F620 /* NSString+MD5Addition.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8E1C6A31C50098F620 /* NSString+MD5Addition.h */; };
 		272F1D911C6A31C50098F620 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D8F1C6A31C50098F620 /* NSString+MD5Addition.m */; };
-		272F1D941C6A31CD0098F620 /* NOPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D921C6A31CD0098F620 /* NOPersistentStore.h */; };
+		272F1D941C6A31CD0098F620 /* NOPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D921C6A31CD0098F620 /* NOPersistentStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		272F1D951C6A31CD0098F620 /* NOPersistentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D931C6A31CD0098F620 /* NOPersistentStore.m */; };
 /* End PBXBuildFile section */
 
