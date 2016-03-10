@@ -41,6 +41,7 @@
 
 @interface NOCache()
 @property (atomic, strong)NSMutableDictionary *creationDates;
+@property (nonatomic, retain)NSString *storagePath;
 @end
 
 static NSMutableDictionary *sharedInstances;

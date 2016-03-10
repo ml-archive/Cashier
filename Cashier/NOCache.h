@@ -32,7 +32,6 @@ static NSTimeInterval const NOCacheDateNotFound = 0;
 
 @interface NOCache : NSObject
 
-@property (nonatomic, retain)NSString *storagePath;
 @property (nonatomic, retain)NSString *id;
 @property (nonatomic, strong)NSCache *memoryCache;
 @property (atomic, assign)BOOL persistent; //Default: YES
