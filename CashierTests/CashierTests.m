@@ -102,6 +102,23 @@
     [cashier deleteObjectForKey:arrayKey];
     NSArray* noArrayFromCache = [cashier objectForKey:arrayKey];
     XCTAssertNil(noArrayFromCache);
+    
+    UIImage* imageToCache = [UIImage imageNamed:@"Nodes" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil];
+    XCTAssertNotNil(imageToCache);
+    NSString* imageKey = @"imageKey";
+    
+    [cashier setImage:imageToCache forKey:imageKey];
+    UIImage* imageFromCache = [cashier objectForKey:imageKey];
+    
+    XCTAssertEqual(imageToCache, imageFromCache);
+    
+    UIImage* sameImageFromCache = [cashier imageForKey:imageKey];
+    XCTAssertEqual(imageToCache, sameImageFromCache);
+    
+    [cashier deleteObjectForKey:imageKey];
+    UIImage* noImageFromCache = [cashier objectForKey:imageKey];
+    XCTAssertNil(noImageFromCache);
+    
 }
 
 - (void)testCacheClearingInDefaultCache {
@@ -124,6 +141,11 @@
     NSString* arrayKey = @"arrayKey";
     [cashier setObject:arrayToCache forKey:arrayKey];
     
+    UIImage* imageToCache = [UIImage imageNamed:@"Nodes" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil];
+    XCTAssertNotNil(imageToCache);
+    NSString* imageKey = @"imageKey";
+    [cashier setImage:imageToCache forKey:imageKey];
+    
     
     [cashier clearAllData];
     
@@ -145,6 +167,11 @@
     NSArray* noArrayFromCache = [cashier objectForKey:arrayKey];
     XCTAssertFalse([cashier objectForKeyIsValid:arrayKey]);
     XCTAssertNil(noArrayFromCache);
+    
+    UIImage* noImageFromCache = [cashier objectForKey:imageKey];
+    XCTAssertFalse([cashier objectForKeyIsValid:imageKey]);
+    XCTAssertNil(noImageFromCache);
+
     
 }
 
