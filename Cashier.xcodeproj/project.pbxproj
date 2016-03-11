@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		272F1D741C6A315E0098F620 /* Cashier.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D731C6A315E0098F620 /* Cashier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		272F1D741C6A315E0098F620 /* Cashier-header.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D731C6A315E0098F620 /* Cashier-header.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		272F1D7B1C6A315E0098F620 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F1D701C6A315E0098F620 /* Cashier.framework */; };
 		272F1D801C6A315E0098F620 /* CashierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D7F1C6A315E0098F620 /* CashierTests.m */; };
-		272F1D8C1C6A31BC0098F620 /* NOCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8A1C6A31BC0098F620 /* NOCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		272F1D8D1C6A31BC0098F620 /* NOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D8B1C6A31BC0098F620 /* NOCache.m */; };
+		272F1D8C1C6A31BC0098F620 /* Cashier.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8A1C6A31BC0098F620 /* Cashier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		272F1D8D1C6A31BC0098F620 /* Cashier.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D8B1C6A31BC0098F620 /* Cashier.m */; };
 		272F1D901C6A31C50098F620 /* NSString+MD5Addition.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8E1C6A31C50098F620 /* NSString+MD5Addition.h */; };
 		272F1D911C6A31C50098F620 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D8F1C6A31C50098F620 /* NSString+MD5Addition.m */; };
 		272F1D941C6A31CD0098F620 /* NOPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D921C6A31CD0098F620 /* NOPersistentStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,17 +30,18 @@
 
 /* Begin PBXFileReference section */
 		272F1D701C6A315E0098F620 /* Cashier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cashier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		272F1D731C6A315E0098F620 /* Cashier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cashier.h; sourceTree = "<group>"; };
+		272F1D731C6A315E0098F620 /* Cashier-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cashier-header.h"; sourceTree = "<group>"; };
 		272F1D751C6A315E0098F620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		272F1D7A1C6A315E0098F620 /* CashierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CashierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		272F1D7F1C6A315E0098F620 /* CashierTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CashierTests.m; sourceTree = "<group>"; };
 		272F1D811C6A315E0098F620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		272F1D8A1C6A31BC0098F620 /* NOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOCache.h; sourceTree = "<group>"; };
-		272F1D8B1C6A31BC0098F620 /* NOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOCache.m; sourceTree = "<group>"; };
+		272F1D8A1C6A31BC0098F620 /* Cashier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cashier.h; sourceTree = "<group>"; };
+		272F1D8B1C6A31BC0098F620 /* Cashier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cashier.m; sourceTree = "<group>"; };
 		272F1D8E1C6A31C50098F620 /* NSString+MD5Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5Addition.h"; sourceTree = "<group>"; };
 		272F1D8F1C6A31C50098F620 /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
 		272F1D921C6A31CD0098F620 /* NOPersistentStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOPersistentStore.h; sourceTree = "<group>"; };
 		272F1D931C6A31CD0098F620 /* NOPersistentStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOPersistentStore.m; sourceTree = "<group>"; };
+		293EEB3D1C92C9B9003A4819 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = Cashier/module.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +66,7 @@
 		272F1D661C6A315E0098F620 = {
 			isa = PBXGroup;
 			children = (
+				293EEB3D1C92C9B9003A4819 /* module.modulemap */,
 				272F1D721C6A315E0098F620 /* Cashier */,
 				272F1D7E1C6A315E0098F620 /* CashierTests */,
 				272F1D711C6A315E0098F620 /* Products */,
@@ -83,13 +85,13 @@
 		272F1D721C6A315E0098F620 /* Cashier */ = {
 			isa = PBXGroup;
 			children = (
-				272F1D8A1C6A31BC0098F620 /* NOCache.h */,
-				272F1D8B1C6A31BC0098F620 /* NOCache.m */,
+				272F1D8A1C6A31BC0098F620 /* Cashier.h */,
+				272F1D8B1C6A31BC0098F620 /* Cashier.m */,
 				272F1D8E1C6A31C50098F620 /* NSString+MD5Addition.h */,
 				272F1D8F1C6A31C50098F620 /* NSString+MD5Addition.m */,
 				272F1D921C6A31CD0098F620 /* NOPersistentStore.h */,
 				272F1D931C6A31CD0098F620 /* NOPersistentStore.m */,
-				272F1D731C6A315E0098F620 /* Cashier.h */,
+				272F1D731C6A315E0098F620 /* Cashier-header.h */,
 				272F1D751C6A315E0098F620 /* Info.plist */,
 			);
 			path = Cashier;
@@ -112,8 +114,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				272F1D941C6A31CD0098F620 /* NOPersistentStore.h in Headers */,
-				272F1D741C6A315E0098F620 /* Cashier.h in Headers */,
-				272F1D8C1C6A31BC0098F620 /* NOCache.h in Headers */,
+				272F1D741C6A315E0098F620 /* Cashier-header.h in Headers */,
+				272F1D8C1C6A31BC0098F620 /* Cashier.h in Headers */,
 				272F1D901C6A31C50098F620 /* NSString+MD5Addition.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,7 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				272F1D911C6A31C50098F620 /* NSString+MD5Addition.m in Sources */,
-				272F1D8D1C6A31BC0098F620 /* NOCache.m in Sources */,
+				272F1D8D1C6A31BC0098F620 /* Cashier.m in Sources */,
 				272F1D951C6A31CD0098F620 /* NOPersistentStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +339,7 @@
 				INFOPLIST_FILE = Cashier/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = Cashier/module.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -353,6 +356,7 @@
 				INFOPLIST_FILE = Cashier/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = Cashier/module.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
