@@ -175,4 +175,46 @@
     
 }
 
+- (void)testCacheLifespanObjectExpired {
+    Cashier* cashier = Cashier.defaultCache;
+    cashier.lifespan = 0.5;
+    cashier.returnsExpiredData = YES;
+    NSString* stringToCache = @"this will be cached";
+    NSString* stringKey = @"stringkey";
+    [cashier setObject: stringToCache forKey:stringKey];
+    NSString* stringFromCache = [cashier objectForKey:stringKey];
+    XCTAssertEqual(stringFromCache, stringToCache);
+    
+    XCTestExpectation* expectation = [self expectationWithDescription:@"expecting cached string object to be invalid"];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        XCTAssertFalse([cashier objectForKeyIsValid:stringKey]);
+        XCTAssertNotNil([cashier objectForKey:stringKey]);
+        [expectation fulfill];
+    });
+    [self waitForExpectationsWithTimeout:1 handler:nil];
+    
+}
+
+- (void)testCacheLifespanObjectBecomesNil {
+    Cashier* cashier = Cashier.defaultCache;
+    cashier.lifespan = 0.5;
+    cashier.returnsExpiredData = NO;
+    NSString* stringToCache = @"this will be cached";
+    NSString* stringKey = @"stringkey";
+    [cashier setObject: stringToCache forKey:stringKey];
+    NSString* stringFromCache = [cashier objectForKey:stringKey];
+    XCTAssertEqual(stringFromCache, stringToCache);
+    
+    XCTestExpectation* expectation = [self expectationWithDescription:@"expecting cached string object to be invalid"];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        XCTAssertFalse([cashier objectForKeyIsValid:stringKey]);
+        XCTAssertNil([cashier objectForKey:stringKey]);
+        [expectation fulfill];
+    });
+    [self waitForExpectationsWithTimeout:1 handler:nil];
+    
+}
+
 @end
