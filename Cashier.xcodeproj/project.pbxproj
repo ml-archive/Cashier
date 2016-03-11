@@ -16,6 +16,7 @@
 		272F1D911C6A31C50098F620 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D8F1C6A31C50098F620 /* NSString+MD5Addition.m */; };
 		272F1D941C6A31CD0098F620 /* NOPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D921C6A31CD0098F620 /* NOPersistentStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		272F1D951C6A31CD0098F620 /* NOPersistentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D931C6A31CD0098F620 /* NOPersistentStore.m */; };
+		27D565221C92D255002152B7 /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D565211C92D255002152B7 /* PersistentStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		272F1D8F1C6A31C50098F620 /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
 		272F1D921C6A31CD0098F620 /* NOPersistentStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOPersistentStore.h; sourceTree = "<group>"; };
 		272F1D931C6A31CD0098F620 /* NOPersistentStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOPersistentStore.m; sourceTree = "<group>"; };
+		27D565211C92D255002152B7 /* PersistentStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
 		293EEB3D1C92C9B9003A4819 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = Cashier/module.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 		272F1D721C6A315E0098F620 /* Cashier */ = {
 			isa = PBXGroup;
 			children = (
+				27D565201C92D255002152B7 /* Source */,
 				272F1D8A1C6A31BC0098F620 /* Cashier.h */,
 				272F1D8B1C6A31BC0098F620 /* Cashier.m */,
 				272F1D8E1C6A31C50098F620 /* NSString+MD5Addition.h */,
@@ -104,6 +107,14 @@
 				272F1D811C6A315E0098F620 /* Info.plist */,
 			);
 			path = CashierTests;
+			sourceTree = "<group>";
+		};
+		27D565201C92D255002152B7 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				27D565211C92D255002152B7 /* PersistentStore.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +229,7 @@
 			files = (
 				272F1D911C6A31C50098F620 /* NSString+MD5Addition.m in Sources */,
 				272F1D8D1C6A31BC0098F620 /* Cashier.m in Sources */,
+				27D565221C92D255002152B7 /* PersistentStore.swift in Sources */,
 				272F1D951C6A31CD0098F620 /* NOPersistentStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
