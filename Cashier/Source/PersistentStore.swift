@@ -6,7 +6,7 @@
 //  Copyright © 2016 Nodes. All rights reserved.
 //
 
-public class PersistentStore: NOCache {
+public class CashierVault: NOCache {
 	
 	private static let persistentKey = "INTERNAL_PERSISTENT_DEFAULT_CACHE"
 	
@@ -23,8 +23,8 @@ public class PersistentStore: NOCache {
 	}
 	
 	//FIXME: fix method signature when NOCache gets rewritten to Swift
-	public override static func defaultCache() -> PersistentStore {
-		return PersistentStore(id: persistentKey)
+	public override static func defaultCache() -> CashierVault {
+		return CashierVault(id: persistentKey)
 	}
 	
 	//FIXME: fix this when NOCache gets rewritten to Swift
