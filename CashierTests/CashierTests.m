@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Cashier.h"
 
 @interface CashierTests : XCTestCase
 
@@ -34,6 +35,117 @@
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+- (void)testObjectCachingInDefaultCache {
+    Cashier* cashier = Cashier.defaultCache;
+    
+    NSString* stringToCache = @"this will be cached";
+    NSString* stringKey = @"stringkey";
+    
+    [cashier setObject: stringToCache forKey:stringKey];
+    NSString* stringFromCache = [cashier objectForKey:stringKey];
+    
+    XCTAssertEqual(stringFromCache, stringToCache);
+    
+    NSString* sameStringFromCache = [cashier stringForKey:stringKey];
+    XCTAssertEqual(sameStringFromCache, stringToCache);
+    
+    [cashier deleteObjectForKey:stringKey];
+    NSString* noStringFromCache = [cashier objectForKey:stringKey];
+    XCTAssertNil(noStringFromCache);
+    
+    NSDictionary* dictToCache = [[NSDictionary alloc] initWithObjects:@[@"obj"] forKeys:@[@"key"]];
+    NSString* dictKey = @"dictkey";
+    
+    [cashier setObject: dictToCache forKey:dictKey];
+    NSDictionary* dictFromCache = [cashier objectForKey:dictKey];
+    
+    XCTAssertEqual(dictToCache, dictFromCache);
+    
+    NSDictionary* sameDictFromCache = [cashier dictForKey:dictKey];
+    XCTAssertEqual(dictToCache, sameDictFromCache);
+    
+    NSDictionary* againSameDictFromCache = [cashier dictionaryForKey:dictKey];
+    XCTAssertEqual(dictToCache, againSameDictFromCache);
+    
+    [cashier deleteObjectForKey:dictKey];
+    NSDictionary* noDictFromCache = [cashier objectForKey:dictKey];
+    XCTAssertNil(noDictFromCache);
+    
+    NSData* dataToCache = [[NSData alloc] initWithBase64EncodedString:stringToCache options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    NSString* dataKey = @"dataKey";
+    
+    [cashier setObject:dataToCache forKey:dataKey];
+    NSData* dataFromCache = [cashier objectForKey:dataKey];
+    
+    XCTAssertEqual(dataToCache, dataFromCache);
+    
+    NSData* sameDataFromCache = [cashier dataForKey:dataKey];
+    XCTAssertEqual(dataToCache, sameDataFromCache);
+    
+    [cashier deleteObjectForKey:dataKey];
+    NSData* noDataFromCache = [cashier objectForKey:dataKey];
+    XCTAssertNil(noDataFromCache);
+    
+    NSArray* arrayToCache = [[NSArray alloc] initWithObjects:@"this", @"will", @"be", @"cached", nil];
+    NSString* arrayKey = @"arrayKey";
+    
+    [cashier setObject:arrayToCache forKey:arrayKey];
+    NSArray* arrayFromCache = [cashier objectForKey:arrayKey];
+    
+    XCTAssertEqual(arrayToCache, arrayFromCache);
+    
+    NSArray* sameArrayFromCache = [cashier arrayForKey:arrayKey];
+    XCTAssertEqual(arrayToCache, sameArrayFromCache);
+    
+    [cashier deleteObjectForKey:arrayKey];
+    NSArray* noArrayFromCache = [cashier objectForKey:arrayKey];
+    XCTAssertNil(noArrayFromCache);
+}
+
+- (void)testCacheClearingInDefaultCache {
+    Cashier* cashier = Cashier.defaultCache;
+    
+    NSString* stringToCache = @"this will be cached";
+    NSString* stringKey = @"stringkey";
+    [cashier setObject: stringToCache forKey:stringKey];
+    
+    
+    NSDictionary* dictToCache = [[NSDictionary alloc] initWithObjects:@[@"obj"] forKeys:@[@"key"]];
+    NSString* dictKey = @"dictkey";
+    [cashier setObject: dictToCache forKey:dictKey];
+    
+    NSData* dataToCache = [[NSData alloc] initWithBase64EncodedString:stringToCache options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    NSString* dataKey = @"dataKey";
+    [cashier setObject:dataToCache forKey:dataKey];
+    
+    NSArray* arrayToCache = [[NSArray alloc] initWithObjects:@"this", @"will", @"be", @"cached", nil];
+    NSString* arrayKey = @"arrayKey";
+    [cashier setObject:arrayToCache forKey:arrayKey];
+    
+    
+    [cashier clearAllData];
+    
+    NSString* noStringFromCache = [cashier objectForKey:stringKey];
+    XCTAssertFalse([cashier objectForKeyIsValid:stringKey]);
+    XCTAssertNil(noStringFromCache);
+    
+    
+    NSDictionary* noDictFromCache = [cashier objectForKey:dictKey];
+    XCTAssertFalse([cashier objectForKeyIsValid:dictKey]);
+    XCTAssertNil(noDictFromCache);
+
+    
+    NSData* noDataFromCache = [cashier objectForKey:dataKey];
+    XCTAssertFalse([cashier objectForKeyIsValid:dataKey]);
+    XCTAssertNil(noDataFromCache);
+    
+    
+    NSArray* noArrayFromCache = [cashier objectForKey:arrayKey];
+    XCTAssertFalse([cashier objectForKeyIsValid:arrayKey]);
+    XCTAssertNil(noArrayFromCache);
+    
 }
 
 @end
