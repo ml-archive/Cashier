@@ -217,4 +217,20 @@
     
 }
 
+- (void)testMemoryCacheClearsOnMemoryWarning {
+    Cashier* cashier = Cashier.defaultCache;
+    cashier.persistent = NO;
+    
+    NSString* stringToCache = @"this will be cached";
+    NSString* stringKey = @"stringkey";
+    [cashier setObject: stringToCache forKey:stringKey];
+    NSString* stringFromCache = [cashier objectForKey:stringKey];
+    XCTAssertEqual(stringFromCache, stringToCache);
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:UIApplicationDidReceiveMemoryWarningNotification object:nil];
+    
+    XCTAssertNil([cashier objectForKey:stringKey]);
+    
+}
+
 @end
