@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Marcus Waring. All rights reserved.
 //
 
-#import "NOCache.h"
+#import "Cashier.h"
 
-@interface NOPersistentStore : NOCache
+@interface NOPersistentStore : Cashier
 
 @end

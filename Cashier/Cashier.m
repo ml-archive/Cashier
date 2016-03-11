@@ -1,14 +1,12 @@
 //
-//  NOCache.m
-//  NOCore
+//  Cashier.m
+//
 //
 //  Created by Kasper Welner on 8/29/12.
 //  Copyright (c) 2012 Nodes. All rights reserved.
 //
 
-#import "NOCache.h"
-//#import "NSString+URLEncode.h"
-//#import "NOVersionManager.h"
+#import "Cashier.h"
 #import "NSString+MD5Addition.h"
 
 @interface NSString (InternalURLEncoding)
@@ -39,7 +37,7 @@
 
 @end
 
-@interface NOCache()
+@interface Cashier()
 @property (atomic, strong)NSMutableDictionary *creationDates;
 @property (nonatomic, retain)NSString *storagePath;
 @property (nonatomic, strong)NSCache *memoryCache;
@@ -49,7 +47,7 @@ static NSMutableDictionary *sharedInstances;
 static NSString * const kCreationDatesKey = @"CreationDate";
 static NSString * const kPropertiesKey = @"Properties";
 
-@implementation NOCache
+@implementation Cashier
 {
     NSMutableDictionary *properties;
 }
@@ -75,7 +73,7 @@ static NSString * const kPropertiesKey = @"Properties";
 - (void)emptyCache
 {
     if( self.memoryCache ) {
-        NSLog(@"NOCACHE REMOVING MEMORY");
+        NSLog(@"CASHIER REMOVING MEMORY");
         [self.memoryCache removeAllObjects];
     }
 }
@@ -89,7 +87,7 @@ static NSString * const kPropertiesKey = @"Properties";
 
 + (NSString *)baseSaveDirectory
 {
-    return [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"NOCache"];
+    return [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"Cashier"];
 }
 
 
@@ -108,7 +106,7 @@ static NSString * const kPropertiesKey = @"Properties";
         sharedInstances = [NSMutableDictionary dictionaryWithCapacity:2];
     });
     
-    NOCache *requestedCacheInstance;
+    Cashier *requestedCacheInstance;
     
     @synchronized (self)
     {
@@ -120,7 +118,7 @@ static NSString * const kPropertiesKey = @"Properties";
             requestedCacheInstance.id = cacheID;
             
             if (![NSString instancesRespondToSelector:@selector(StringByURLEncoding)] ) {
-                @throw [NSException exceptionWithName:@"NOCore fatal error" reason:@"********* \n PLEASE ADD THESE FLAGS: \n\"-lz -lsqlite3.0 -ObjC -all_load\" \nto \n\"Other Linker Flags\" in project settings. \n\n Quitting now! \n\n *********"  userInfo:nil];
+                @throw [NSException exceptionWithName:@"Cashier Fatal error" reason:@"********* \n PLEASE ADD THESE FLAGS: \n\"-lz -lsqlite3.0 -ObjC -all_load\" \nto \n\"Other Linker Flags\" in project settings. \n\n Quitting now! \n\n *********"  userInfo:nil];
             }
             NSString *idDir  = [requestedCacheInstance.id StringByURLEncoding];
             NSString *dirPath = [requestedCacheInstance.storagePath stringByAppendingPathComponent:idDir];
@@ -301,7 +299,7 @@ static NSString * const kPropertiesKey = @"Properties";
         return date.timeIntervalSince1970;
     }
     
-    return NOCacheDateNotFound;
+    return CashierDateNotFound;
 }
 
 - (void)refreshValidationOnObjectForKey:(NSString *)key
@@ -340,7 +338,7 @@ static NSString * const kPropertiesKey = @"Properties";
     {
         if ([object isKindOfClass:[UIImage class]])
         {
-            @throw [NSException exceptionWithName:@"NOCache error!!" reason:@"You are using - (void)setObject:ForKey: with a UIImage. Please use - (void)setImage:ForKey:. Use -(void)imageForKey: to retrieve it." userInfo:nil];
+            @throw [NSException exceptionWithName:@"Cashier error!!" reason:@"You are using - (void)setObject:ForKey: with a UIImage. Please use - (void)setImage:ForKey:. Use -(void)imageForKey: to retrieve it." userInfo:nil];
         }
         else if ([object respondsToSelector:@selector(writeToFile:options:error:)])
         {
@@ -353,7 +351,7 @@ static NSString * const kPropertiesKey = @"Properties";
         else
         {
             [self.memoryCache setObject:object forKey:key];
-            NSLog(@"NOCache: Error! Object: %@ is not supported for persistent caching! Object only cached in memory.", object);
+            NSLog(@"Cashier Error! Object: %@ is not supported for persistent caching! Object only cached in memory.", object);
         }
     } else {
         [self.memoryCache setObject:object forKey:key];
