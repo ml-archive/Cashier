@@ -43,7 +43,7 @@
 		272F1D921C6A31CD0098F620 /* NOPersistentStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOPersistentStore.h; sourceTree = "<group>"; };
 		272F1D931C6A31CD0098F620 /* NOPersistentStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOPersistentStore.m; sourceTree = "<group>"; };
 		293EEB3D1C92C9B9003A4819 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = Cashier/module.modulemap; sourceTree = "<group>"; };
-		293EEB3E1C93011E003A4819 /* Nodes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Nodes.png; path = ../../../Downloads/Nodes.png; sourceTree = "<group>"; };
+		293EEB3E1C93011E003A4819 /* Nodes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nodes.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
