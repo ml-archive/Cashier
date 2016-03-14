@@ -34,7 +34,12 @@ SPM support is coming soon.
 
 ## 💻 Usage
 
-// TODO
+```objective-c
+Cashier* cashier =[Cashier cacheWithId:@"cacheID"];             // get/create a Cashier object with id cacheID
+[cashier setObject: stringToCache forKey:@"stringCache"];       // add an object to the cache
+NSString* stringFromCache = [cashier objectForKey:stringKey];   // get the object from the cache
+```
+// TODO: add more usage examples
 
 ## 👥 Credits
 Made with ❤️ at [Nodes](http://nodesagency.com).
