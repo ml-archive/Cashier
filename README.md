@@ -2,6 +2,7 @@
 
 Cashier is a caching framework that makes it easy to work with persistent data.
 
+[![Build Status](https://travis-ci.org/nodes-ios/Cashier.svg?branch=master)](https://travis-ci.org/nodes-ios/Cashier)
 
 ## 📝 Requirements
 
