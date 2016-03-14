@@ -80,6 +80,7 @@ static NSString * const kPropertiesKey = @"Properties";
 
 - (void)dealloc
 {
+    [self removeKVO];
 #ifndef WATCH
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
 #endif
@@ -234,6 +235,14 @@ static NSString * const kPropertiesKey = @"Properties";
               context:nil];
 }
 
+- (void)removeKVO
+{
+    [self removeObserver:self forKeyPath:@"lifespan"];
+    [self removeObserver:self forKeyPath:@"returnsExpiredData"];
+    [self removeObserver:self forKeyPath:@"encryptionEnabled"];
+    [self removeObserver:self forKeyPath:@"persistent"];
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     [properties setValue:change[NSKeyValueChangeNewKey] forKey:keyPath];
@@ -242,7 +251,7 @@ static NSString * const kPropertiesKey = @"Properties";
 
 - (void)setPersistsCacheAcrossVersions:(BOOL)persistsCacheAcrossVersions
 {
-    [[NSUserDefaults standardUserDefaults] setObject:@(persistsCacheAcrossVersions) forKey:[@"NOCACHE_VER_" stringByAppendingString:self.id]];
+    [[NSUserDefaults standardUserDefaults] setObject:@(persistsCacheAcrossVersions) forKey:[@"NOCACHE_PERSISTS_VER_" stringByAppendingString:self.id]];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     _persistsCacheAcrossVersions = persistsCacheAcrossVersions;

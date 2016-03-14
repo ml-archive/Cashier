@@ -17,6 +17,8 @@
 		272F1D941C6A31CD0098F620 /* NOPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D921C6A31CD0098F620 /* NOPersistentStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		272F1D951C6A31CD0098F620 /* NOPersistentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D931C6A31CD0098F620 /* NOPersistentStore.m */; };
 		293EEB3F1C93011E003A4819 /* Nodes.png in Resources */ = {isa = PBXBuildFile; fileRef = 293EEB3E1C93011E003A4819 /* Nodes.png */; };
+		293EEB421C9719E3003A4819 /* NSBundle+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 293EEB411C9719E3003A4819 /* NSBundle+Swizzle.m */; };
+		293EEB451C97235C003A4819 /* NSMutableDictionary+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 293EEB441C97235C003A4819 /* NSMutableDictionary+Swizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,10 @@
 		272F1D931C6A31CD0098F620 /* NOPersistentStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOPersistentStore.m; sourceTree = "<group>"; };
 		293EEB3D1C92C9B9003A4819 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = Cashier/module.modulemap; sourceTree = "<group>"; };
 		293EEB3E1C93011E003A4819 /* Nodes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nodes.png; sourceTree = "<group>"; };
+		293EEB401C9719E3003A4819 /* NSBundle+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Swizzle.h"; sourceTree = "<group>"; };
+		293EEB411C9719E3003A4819 /* NSBundle+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Swizzle.m"; sourceTree = "<group>"; };
+		293EEB431C97235C003A4819 /* NSMutableDictionary+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Swizzle.h"; sourceTree = "<group>"; };
+		293EEB441C97235C003A4819 /* NSMutableDictionary+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Swizzle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,10 @@
 				293EEB3E1C93011E003A4819 /* Nodes.png */,
 				272F1D7F1C6A315E0098F620 /* CashierTests.m */,
 				272F1D811C6A315E0098F620 /* Info.plist */,
+				293EEB401C9719E3003A4819 /* NSBundle+Swizzle.h */,
+				293EEB411C9719E3003A4819 /* NSBundle+Swizzle.m */,
+				293EEB431C97235C003A4819 /* NSMutableDictionary+Swizzle.h */,
+				293EEB441C97235C003A4819 /* NSMutableDictionary+Swizzle.m */,
 			);
 			path = CashierTests;
 			sourceTree = "<group>";
@@ -230,7 +240,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				293EEB451C97235C003A4819 /* NSMutableDictionary+Swizzle.m in Sources */,
 				272F1D801C6A315E0098F620 /* CashierTests.m in Sources */,
+				293EEB421C9719E3003A4819 /* NSBundle+Swizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
