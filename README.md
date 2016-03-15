@@ -33,13 +33,78 @@ SPM support is coming soon.
 
 
 ## 💻 Usage
+**Creating and accessing a Cashier object:**
 
 ```objective-c
-Cashier* cashier =[Cashier cacheWithId:@"cacheID"];             // get/create a Cashier object with id cacheID
-[cashier setObject: stringToCache forKey:@"stringCache"];       // add an object to the cache
-NSString* stringFromCache = [cashier objectForKey:stringKey];   // get the object from the cache
+Cashier* cashier = [Cashier cacheWithId:@"cacheID"];             	// get/create a Cashier object with id "cacheID"
+Cashier* defaultCashier = Cashier.defaultCache;						// get/create a the default cache.
 ```
-// TODO: add more usage examples
+The same method is used both for creating and accessing a Cashier object. If the Cashier object with the specified id hasn't been created before, it will be created and returned. If it has already been created, the existing one will be returned.
+
+**Caching NSString in a Cashier object:**
+
+```objective-c
+Cashier* cashier = [Cashier cacheWithId:@"stringCache"];             		// get/create a Cashier object with id "stringCache"
+[cashier setObject: stringToCache forKey:@"stringCacheKey"];       			// add an object to the cache
+NSString* stringFromCache = [cashier objectForKey: @"stringCacheKey"];   	// get the object from the cache
+```
+
+**Caching NSData in a Cashier object:**
+
+```objective-c
+Cashier* cashier = [Cashier cacheWithId:@"dataCache"];             	// get/create a Cashier object with id "cacheID"
+[cashier setData: yourNSDataObject forKey:@"dataCacheKey"];       	// add an object to the cache
+NSData* dataFromCache = [cashier dataForKey:@"dataCacheKey"];   	// get the object from the cache
+```
+
+**Caching UIImage in a Cashier object:**
+
+```objective-c
+Cashier* cashier = [Cashier cacheWithId:@"imageCache"];             // get/create a Cashier object with id "cacheID"
+[cashier setImage: yourUIImage forKey:@"imageCacheKey"];       		// add an object to the cache
+UIImage* imageFromCache = [cashier imageForKey:@"imageCacheKey"];   // get the object from the cache
+```
+
+
+**Caching any other type of objects (including custom objects)**
+
+```objective-c
+Cashier* cashier = [Cashier cacheWithId:@"cacheID"];             	// get/create a Cashier object with id "cacheID"
+YourObject *yourObject = [[YourObject alloc] init];
+[cashier setObject: yourObject forKey:@"cacheKey"];       			// add an object to the cache
+YourObject* stringFromCache = [cashier objectForKey:@"cacheKey"];   // get the object from the cache
+```
+
+You can get typed objects from the cache using the following methods:
+
+```objective-c
+- (UIImage *)imageForKey:(NSString *)key;
+- (NSData *)dataForKey:(NSString *)key;
+- (NSDictionary *)dictionaryForKey:(NSString *)key;
+- (NSArray *)arrayForKey:(NSString *)key;
+- (NSString *)stringForKey:(NSString *)key;
+```
+
+**Persistency**
+
+A cashier object has 2 layers of cache. If the `persistent` property is set to `NO`, the objects will be cached in memory, using an NSCache. If `persistent` is `YES`, the objects will be written to a file in the `Library/Caches` folder. This means that its contents are not backed up by iTunes and may be deleted by the system. Read more about the [iOS file system](https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html).
+
+A `Cashier` object has a `lifespan`. This determine how long the cached objects should be valid before they're considered expired. If the cached objects are older than the cache’s lifespan, they will be considered expired. Expired objects are considered invalid, but they are not deleted. Set the `returnsExpiredData` to `YES` if you want to also use expired data. `lifespan` is 0 by default, which means that the data will never expire.
+
+The `persistsCacheAcrossVersions` property determines if the contents of the current cache persist across app version updates. `persistsCacheAcrossVersions` is `false` by default. This is because if a model changes, the app can crash if it gets old data from the cache and it’s expecting it to look differently.
+
+**Security**
+
+The `encryptionEnabled` determines if the contents of the current cache are written to a protected file. If `encryptionEnabled` is false, the file that the cached objects are written to will be written using 
+[NSDataWritingFileProtectionComplete](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/Foundation/Classes/NSData_Class/index.html#//apple_ref/c/tdef/NSDataWritingOptions).
+If `encryptionEnabled` is false, the file that the cached objects are written to will not be protected. `encryptionEnabled` is false by default.
+
+**Usage guidelines**
+
+* We recommend using different caches for different types of data. 
+* Use the `Cashier.defaultCache` to get very easy access to a cache.
+* We don't recommend using the default cache for storing lots of data (f.x., a data source of a table view), but for singular properties or objects. Also take into account the fact that the default cache doesn't persist across version updates.
+
 
 ## 👥 Credits
 Made with ❤️ at [Nodes](http://nodesagency.com).
