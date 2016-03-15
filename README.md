@@ -52,7 +52,7 @@ NSString* stringFromCache = [cashier objectForKey: @"stringCacheKey"];   	// get
 **Caching NSData in a Cashier object:**
 
 ```objective-c
-Cashier* cashier = [Cashier cacheWithId:@"dataCache"];             	// get/create a Cashier object with id "cacheID"
+Cashier* cashier = [Cashier cacheWithId:@"dataCache"];             	// get/create a Cashier object with id "dataCache"
 [cashier setData: yourNSDataObject forKey:@"dataCacheKey"];       	// add an object to the cache
 NSData* dataFromCache = [cashier dataForKey:@"dataCacheKey"];   	// get the object from the cache
 ```
@@ -60,7 +60,7 @@ NSData* dataFromCache = [cashier dataForKey:@"dataCacheKey"];   	// get the obje
 **Caching UIImage in a Cashier object:**
 
 ```objective-c
-Cashier* cashier = [Cashier cacheWithId:@"imageCache"];             // get/create a Cashier object with id "cacheID"
+Cashier* cashier = [Cashier cacheWithId:@"imageCache"];             // get/create a Cashier object with id "imageCache"
 [cashier setImage: yourUIImage forKey:@"imageCacheKey"];       		// add an object to the cache
 UIImage* imageFromCache = [cashier imageForKey:@"imageCacheKey"];   // get the object from the cache
 ```
@@ -89,7 +89,50 @@ You can get typed objects from the cache using the following methods:
 
 A cashier object has 2 layers of cache. If the `persistent` property is set to `NO`, the objects will be cached in memory, using an NSCache. If `persistent` is `YES`, the objects will be written to a file in the `Library/Caches` folder. This means that its contents are not backed up by iTunes and may be deleted by the system. Read more about the [iOS file system](https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html).
 
+```objective-c
+Cashier* cashier = [Cashier cacheWithId:@"cacheID"];             	// get/create a Cashier object with id "cacheID"
+cashier.persistent = YES;											// makes the Cashier cache the objects in files
+cashier.persistent = NO;											// makes the Cashier cache the objects in memory
+```
+
+**Expiration**
+
 A `Cashier` object has a `lifespan`. This determine how long the cached objects should be valid before they're considered expired. If the cached objects are older than the cache’s lifespan, they will be considered expired. Expired objects are considered invalid, but they are not deleted. Set the `returnsExpiredData` to `YES` if you want to also use expired data. `lifespan` is 0 by default, which means that the data will never expire.
+
+```objective-c
+Cashier* cashier = [Cashier cacheWithId:@"cacheID"];   // get/create a Cashier object with id "cacheID"
+cashier.lifespan = 60;									// makes the cached objects have a lifespan of one minute
+cashier.returnsExpiredData = NO;						//	makes the cache not return cached objects after their lifespan has passed
+YourObject *yourObject = [[YourObject alloc] init];
+[cashier setObject: yourObject forKey:@"cacheKey"]; 
+// after one minute
+[cashier objectForKeyIsValid:@"cacheKey"]			// NO
+[cashier objectForKey:@"cacheKey"]					// nil
+```
+
+```objective-c
+Cashier* cashier = [Cashier cacheWithId:@"cacheID"];    // get/create a Cashier object with id "cacheID"
+cashier.lifespan = 60;									// makes the cached objects have a lifespan of one minute
+cashier.returnsExpiredData = YES;						//	makes the cache return cached objects after their lifespan has passed
+YourObject *yourObject = [[YourObject alloc] init];
+[cashier setObject: yourObject forKey:@"cacheKey"]; 
+// after one minute
+[cashier objectForKeyIsValid:@"cacheKey"]			// NO
+[cashier objectForKey:@"cacheKey"]					// yourObject
+```
+
+It's possible to refresh the validation timestamp of an object using the `- (void)refreshValidationOnObjectForKey:(NSString *)key;` method. This will update the timestamp when the cached object was last validated to the current timestamp. This means that if an object had a lifespan of 1 minute, but then we refresh its validation, it will have a lifespan of 1 minute from the moment we refreshed its validation.
+
+```objective-c
+Cashier* cashier = [Cashier cacheWithId:@"cacheID"];    // get/create a Cashier object with id "cacheID"
+cashier.lifespan = 60;									// makes the cached objects have a lifespan of one minute
+YourObject *yourObject = [[YourObject alloc] init];
+[cashier setObject: yourObject forKey:@"cacheKey"]; 
+// after 30 seconds
+[cashier refreshValidationOnObjectForKey:@"cacheKey"];
+// after another 40 seconds
+[cashier objectForKeyIsValid:@"cacheKey"]			// YES
+```
 
 The `persistsCacheAcrossVersions` property determines if the contents of the current cache persist across app version updates. `persistsCacheAcrossVersions` is `false` by default. This is because if a model changes, the app can crash if it gets old data from the cache and it’s expecting it to look differently.
 
