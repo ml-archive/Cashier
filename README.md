@@ -100,7 +100,7 @@ cashier.persistent = NO;											// makes the Cashier cache the objects in mem
 A `Cashier` object has a `lifespan`. This determine how long the cached objects should be valid before they're considered expired. If the cached objects are older than the cache’s lifespan, they will be considered expired. Expired objects are considered invalid, but they are not deleted. Set the `returnsExpiredData` to `YES` if you want to also use expired data. `lifespan` is 0 by default, which means that the data will never expire.
 
 ```objective-c
-Cashier* cashier = [Cashier cacheWithId:@"cacheID"];   // get/create a Cashier object with id "cacheID"
+Cashier* cashier = [Cashier cacheWithId:@"cacheID"];    // get/create a Cashier object with id "cacheID"
 cashier.lifespan = 60;									// makes the cached objects have a lifespan of one minute
 cashier.returnsExpiredData = NO;						//	makes the cache not return cached objects after their lifespan has passed
 YourObject *yourObject = [[YourObject alloc] init];
