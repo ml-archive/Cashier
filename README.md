@@ -25,13 +25,6 @@ github "nodes-ios/Cashier"
 
 CocoaPods support is coming soon.
 
-### Swit Package Manager
-
-SPM support is coming soon.
-
-**NOTE:** This doesn't currently work as SPM doesn't support iOS, but once it will we will already be supporting it! :)
-
-
 ## 💻 Usage
 **Creating and accessing a Cashier object:**
 
