@@ -342,4 +342,23 @@
 }
 
 
+- (void)testCacheActuallySavesOnDisk {
+    Cashier* cashier = Cashier.defaultCache;
+    // forcing cache to write to files
+    cashier.persistent = YES;
+    
+    NSString* stringToCache = @"this will be cached";
+    NSString* stringKey = @"stringkey";
+    [cashier setObject: stringToCache forKey:stringKey];
+    NSString* stringFromCache = [cashier objectForKey:stringKey];
+    XCTAssertEqual(stringFromCache, stringToCache);
+    
+    // forcing cache to clear memory cache
+    [[NSNotificationCenter defaultCenter] postNotificationName:UIApplicationDidReceiveMemoryWarningNotification object:nil];
+    
+    XCTAssertNotNil([cashier objectForKey:stringKey]);
+    XCTAssertTrue([stringToCache isEqualToString:[cashier objectForKey:stringKey]]);
+    
+}
+
 @end
