@@ -9,34 +9,6 @@
 #import "Cashier.h"
 #import "NSString+MD5Addition.h"
 
-@interface NSString (InternalURLEncoding)
-- (NSString *)StringByURLEncoding;
-@end
-
-@implementation NSString (InternalURLEncoding)
-
-- (NSString *)StringByURLEncoding;
-{
-    NSString *encodedString = [self stringByReplacingOccurrencesOfString:@"•" withString:@"-"];
-    
-    encodedString = [encodedString stringByReplacingOccurrencesOfString:@"€" withString:@"Euro"];
-    
-    CFStringRef encodedCFString = (__bridge CFStringRef)encodedString;
-    
-    CFStringRef returnCFString = CFURLCreateStringByAddingPercentEscapes(NULL,
-                                                                         encodedCFString,
-                                                                         NULL,
-                                                                         (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                                         kCFStringEncodingISOLatin1 );
-    
-    NSString *returnString = (__bridge_transfer NSString *)returnCFString;
-    
-    return returnString;
-    
-}
-
-@end
-
 @interface Cashier()
 @property (atomic, strong)NSMutableDictionary *creationDates;
 @property (nonatomic, retain)NSString *storagePath;
@@ -118,10 +90,7 @@ static NSString * const kPropertiesKey = @"Properties";
             requestedCacheInstance = [[self alloc] init];
             requestedCacheInstance.id = cacheID;
             
-            if (![NSString instancesRespondToSelector:@selector(StringByURLEncoding)] ) {
-                @throw [NSException exceptionWithName:@"Cashier Fatal error" reason:@"********* \n PLEASE ADD THESE FLAGS: \n\"-lz -lsqlite3.0 -ObjC -all_load\" \nto \n\"Other Linker Flags\" in project settings. \n\n Quitting now! \n\n *********"  userInfo:nil];
-            }
-            NSString *idDir  = [requestedCacheInstance.id StringByURLEncoding];
+            NSString *idDir  = [requestedCacheInstance encodedStringForUseInPath:requestedCacheInstance.id];
             NSString *dirPath = [requestedCacheInstance.storagePath stringByAppendingPathComponent:idDir];
             
             NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -323,18 +292,21 @@ static NSString * const kPropertiesKey = @"Properties";
     }
 }
 
-#pragma mark - Tools
+#pragma mark - Tools -
 
 - (NSString *)URLEncodedFilenameFromString:(NSString *)string
 {
-    NSString *dir = [self.id StringByURLEncoding];
+    NSString *directory = [self encodedStringForUseInPath:self.id];
+    NSString *filename  = [[self encodedStringForUseInPath:string] stringFromMD5];
     
-    NSString *filename = [[string StringByURLEncoding] stringFromMD5];
-    
-    return [[self.storagePath stringByAppendingPathComponent:dir] stringByAppendingPathComponent:filename];
+    return [[self.storagePath stringByAppendingPathComponent:directory] stringByAppendingPathComponent:filename];
 }
 
-#pragma mark - Getters and setters
+- (NSString *)encodedStringForUseInPath:(NSString *)string {
+    return [string stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]];
+}
+
+#pragma mark - Getters and Setters -
 
 - (void)setObject:(id)object forKey:(NSString *)key
 {
@@ -560,7 +532,7 @@ static NSString * const kPropertiesKey = @"Properties";
 {
     [self.memoryCache removeAllObjects];
     
-    NSString *dir = [self.storagePath stringByAppendingPathComponent:[self.id StringByURLEncoding]];
+    NSString *dir = [self.storagePath stringByAppendingPathComponent:[self encodedStringForUseInPath:self.id]];
     
     NSFileManager* fm = [NSFileManager defaultManager];
     NSDirectoryEnumerator* en = [fm enumeratorAtPath:dir];
