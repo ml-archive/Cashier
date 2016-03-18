@@ -1,4 +1,6 @@
-# Cashier
+<p align="center">
+  <img src="./Cashier_icon.png?raw=true" alt="Cashier"/>
+</p>
 
 Cashier is a caching framework that makes it easy to work with persistent data.
 
