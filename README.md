@@ -88,6 +88,12 @@ cashier.persistent = YES;											// makes the Cashier cache the objects in fi
 cashier.persistent = NO;											// makes the Cashier cache the objects in memory
 ```
 
+For persistent data that isn't saved in the `Library/Caches` folder, use the `NOPersistentStore`. This is a subclass of `Cashier`, that works exactly the same way as `Cashier`, but it saves its data to the `Documents/NOCache` folder, which isn't cleared by the system when the device runs out of space.
+
+```objective-c
+NOPersistentStore* persistentStore = [NOPersistentStore cacheWithId:@"persistentStoreId"];             	// get/create an NOPersistentStore object with id "persistentStoreId"
+```
+
 **Expiration**
 
 A `Cashier` object has a `lifespan`. This determine how long the cached objects should be valid before they're considered expired. If the cached objects are older than the cache’s lifespan, they will be considered expired. Expired objects are considered invalid, but they are not deleted. Set the `returnsExpiredData` to `YES` if you want to also use expired data. `lifespan` is 0 by default, which means that the data will never expire.
