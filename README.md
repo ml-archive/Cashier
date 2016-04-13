@@ -6,6 +6,7 @@ Cashier is a caching framework that makes it easy to work with persistent data.
 
 [![Build Status](https://travis-ci.org/nodes-ios/Cashier.svg?branch=master)](https://travis-ci.org/nodes-ios/Cashier)
 [![Codecov](https://img.shields.io/codecov/c/github/nodes-ios/Cashier.svg)](https://codecov.io/github/nodes-ios/Cashier)
+[![CocoaPods](https://img.shields.io/cocoapods/v/Cashier.svg)](https://cocoapods.org/pods/Cashier)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![Plaform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nodes-ios/Codemine/blob/master/LICENSE)
@@ -25,7 +26,9 @@ github "nodes-ios/Cashier"
 
 ### CocoaPods
 
-CocoaPods support is coming soon.
+~~~
+pod 'Codemine', '~> 1.0.1'
+~~~ 
 
 ## 💻 Usage
 **Creating and accessing a Cashier object:**
