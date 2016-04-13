@@ -44,7 +44,7 @@
 		272F1D8F1C6A31C50098F620 /* NSString+MD5Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5Addition.m"; sourceTree = "<group>"; };
 		272F1D921C6A31CD0098F620 /* NOPersistentStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOPersistentStore.h; sourceTree = "<group>"; };
 		272F1D931C6A31CD0098F620 /* NOPersistentStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOPersistentStore.m; sourceTree = "<group>"; };
-		293EEB3D1C92C9B9003A4819 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = Cashier/module.modulemap; sourceTree = "<group>"; };
+		293EEB3D1C92C9B9003A4819 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		293EEB3E1C93011E003A4819 /* Nodes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nodes.png; sourceTree = "<group>"; };
 		293EEB401C9719E3003A4819 /* NSBundle+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Swizzle.h"; sourceTree = "<group>"; };
 		293EEB411C9719E3003A4819 /* NSBundle+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Swizzle.m"; sourceTree = "<group>"; };
@@ -74,7 +74,6 @@
 		272F1D661C6A315E0098F620 = {
 			isa = PBXGroup;
 			children = (
-				293EEB3D1C92C9B9003A4819 /* module.modulemap */,
 				272F1D721C6A315E0098F620 /* Cashier */,
 				272F1D7E1C6A315E0098F620 /* CashierTests */,
 				272F1D711C6A315E0098F620 /* Products */,
@@ -93,14 +92,8 @@
 		272F1D721C6A315E0098F620 /* Cashier */ = {
 			isa = PBXGroup;
 			children = (
-				272F1D8A1C6A31BC0098F620 /* Cashier.h */,
-				272F1D8B1C6A31BC0098F620 /* Cashier.m */,
-				272F1D8E1C6A31C50098F620 /* NSString+MD5Addition.h */,
-				272F1D8F1C6A31C50098F620 /* NSString+MD5Addition.m */,
-				272F1D921C6A31CD0098F620 /* NOPersistentStore.h */,
-				272F1D931C6A31CD0098F620 /* NOPersistentStore.m */,
-				272F1D731C6A315E0098F620 /* Cashier-header.h */,
-				272F1D751C6A315E0098F620 /* Info.plist */,
+				293609411CBE62E00003D97A /* Classes */,
+				293609421CBE62FB0003D97A /* Supporting Files */,
 			);
 			path = Cashier;
 			sourceTree = "<group>";
@@ -117,6 +110,29 @@
 				293EEB441C97235C003A4819 /* NSMutableDictionary+Swizzle.m */,
 			);
 			path = CashierTests;
+			sourceTree = "<group>";
+		};
+		293609411CBE62E00003D97A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				272F1D8A1C6A31BC0098F620 /* Cashier.h */,
+				272F1D8B1C6A31BC0098F620 /* Cashier.m */,
+				272F1D8E1C6A31C50098F620 /* NSString+MD5Addition.h */,
+				272F1D8F1C6A31C50098F620 /* NSString+MD5Addition.m */,
+				272F1D921C6A31CD0098F620 /* NOPersistentStore.h */,
+				272F1D931C6A31CD0098F620 /* NOPersistentStore.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		293609421CBE62FB0003D97A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				293EEB3D1C92C9B9003A4819 /* module.modulemap */,
+				272F1D731C6A315E0098F620 /* Cashier-header.h */,
+				272F1D751C6A315E0098F620 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,10 +369,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Cashier/Info.plist;
+				INFOPLIST_FILE = "Cashier/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = Cashier/module.modulemap;
+				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -371,10 +387,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Cashier/Info.plist;
+				INFOPLIST_FILE = "Cashier/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = Cashier/module.modulemap;
+				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
