@@ -8,6 +8,13 @@
 
 #import "Cashier.h"
 
+/**
+ 
+ NOPersistentStore is a special type of Cashier. On the outside, it works exactly the 
+ same as a Cashier, but unlike the Cashier, it saves the cached objects in a folder 
+ that doesn't get cleared by the system when the device runs out of space.
+ 
+ */
 @interface NOPersistentStore : Cashier
 
 @end
