@@ -27,7 +27,7 @@ github "nodes-ios/Cashier"
 ### CocoaPods
 
 ~~~
-pod 'Codemine', '~> 1.0.1'
+pod 'Cashier', '~> 1.0.1'
 ~~~ 
 
 ## 💻 Usage
