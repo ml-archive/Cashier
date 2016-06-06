@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "272F1D6F1C6A315E0098F620"
-               BuildableName = "Cashier.framework"
-               BlueprintName = "Cashier"
+               BuildableName = "Cashier iOS.framework"
+               BlueprintName = "Cashier iOS"
                ReferencedContainer = "container:Cashier.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,8 +44,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "272F1D6F1C6A315E0098F620"
-            BuildableName = "Cashier.framework"
-            BlueprintName = "Cashier"
+            BuildableName = "Cashier iOS.framework"
+            BlueprintName = "Cashier iOS"
             ReferencedContainer = "container:Cashier.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,8 +66,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "272F1D6F1C6A315E0098F620"
-            BuildableName = "Cashier.framework"
-            BlueprintName = "Cashier"
+            BuildableName = "Cashier iOS.framework"
+            BlueprintName = "Cashier iOS"
             ReferencedContainer = "container:Cashier.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -84,8 +84,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "272F1D6F1C6A315E0098F620"
-            BuildableName = "Cashier.framework"
-            BlueprintName = "Cashier"
+            BuildableName = "Cashier iOS.framework"
+            BlueprintName = "Cashier iOS"
             ReferencedContainer = "container:Cashier.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

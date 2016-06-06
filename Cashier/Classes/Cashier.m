@@ -34,7 +34,7 @@ static NSString * const kPropertiesKey = @"Properties";
         self.persistent = YES;
         self.returnsExpiredData = YES;
         
-#ifndef WATCH
+#ifndef TARGET_OS_WATCH
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(emptyCache) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
 #endif
     }
@@ -53,7 +53,7 @@ static NSString * const kPropertiesKey = @"Properties";
 - (void)dealloc
 {
     [self removeKVO];
-#ifndef WATCH
+#ifndef TARGET_OS_WATCH
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
 #endif
 }
@@ -317,11 +317,14 @@ static NSString * const kPropertiesKey = @"Properties";
     
     if (self.persistent)
     {
+#if TARGET_OS_IPHONE
         if ([object isKindOfClass:[UIImage class]])
         {
             @throw [NSException exceptionWithName:@"Cashier error!!" reason:@"You are using - (void)setObject:ForKey: with a UIImage. Please use - (void)setImage:ForKey:. Use -(void)imageForKey: to retrieve it." userInfo:nil];
         }
-        else if ([object respondsToSelector:@selector(writeToFile:options:error:)])
+        else
+#endif
+            if ([object respondsToSelector:@selector(writeToFile:options:error:)])
         {
             [self setWritableObject:object forKey:key useMemoryCache:YES];
         }
@@ -339,7 +342,7 @@ static NSString * const kPropertiesKey = @"Properties";
         [self refreshValidationOnObjectForKey:key];
     }
 }
-
+#if TARGET_OS_IPHONE
 - (void)setImage:(UIImage *)image forKey:(NSString *)key
 {
     [self.memoryCache setObject:image forKey:key];
@@ -350,7 +353,7 @@ static NSString * const kPropertiesKey = @"Properties";
         [self setWritableObject:UIImagePNGRepresentation(image) forKey:key useMemoryCache:NO];
     }
 }
-
+#endif
 - (void)setData:(NSData *)data forKey:(NSString *)key
 {
     [self setData:data forKey:key useMemoryCache:YES];
@@ -374,7 +377,11 @@ static NSString * const kPropertiesKey = @"Properties";
     NSDataWritingOptions writeOptions = 0;
     
     if (self.encryptionEnabled) {
+#if TARGET_OS_IPHONE
         writeOptions = NSDataWritingFileProtectionComplete | NSDataWritingAtomic;
+#else 
+        writeOptions = NSDataWritingAtomic;
+#endif
     }
     
     NSError *error;
@@ -431,7 +438,7 @@ static NSString * const kPropertiesKey = @"Properties";
     
     return object;
 }
-
+#if TARGET_OS_IPHONE
 - (UIImage *)imageForKey:(NSString *)key
 {
     if (![self internalObjectForKeyIsValid:key] && !self.returnsExpiredData) {
@@ -457,6 +464,7 @@ static NSString * const kPropertiesKey = @"Properties";
     
     return image;
 }
+#endif
 
 - (NSData *)dataForKey:(NSString *)key
 {

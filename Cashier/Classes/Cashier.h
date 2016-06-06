@@ -5,9 +5,12 @@
 //  Created by Kasper Welner on 8/29/12.
 //  Copyright (c) 2012 Nodes. All rights reserved.
 
-
+#import "TargetConditionals.h"
+#if TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
-
+#else
+#import <Cocoa/Cocoa.h>
+#endif
 static NSTimeInterval const CashierDateNotFound = 0;
 
 /**
@@ -19,7 +22,7 @@ static NSTimeInterval const CashierDateNotFound = 0;
      + (id)defaultCache
  
  or
- 
+ #import "TargetConditionals.h" 
      + (id)cacheWithId:(NSString *)cacheID
  
  to get/create a cache.
@@ -120,7 +123,7 @@ static NSTimeInterval const CashierDateNotFound = 0;
  */
 - (void)setObject:(id)object forKey:(NSString *)key;
 
-
+#if TARGET_OS_IPHONE
 /**
  *  Sets the image value of the specified key in the cache.
  *
@@ -128,7 +131,7 @@ static NSTimeInterval const CashierDateNotFound = 0;
  *  @param key   The key with wich to associate the image
  */
 - (void)setImage:(UIImage *)image forKey:(NSString *)key;
-
+#endif
 
 /**
  *  Sets the data value of the specified key in the cache.
@@ -149,7 +152,7 @@ static NSTimeInterval const CashierDateNotFound = 0;
  */
 - (id)objectForKey:(NSString *)key;
 
-
+#if TARGET_OS_IPHONE
 /**
  *  Returns the image value associated with a given key.
  *
@@ -158,7 +161,7 @@ static NSTimeInterval const CashierDateNotFound = 0;
  *  @return The UIImage value associated with key, or nil if no value is associated with key.
  */
 - (UIImage *)imageForKey:(NSString *)key;
-
+#endif
 
 /**
  *  Returns the data value associated with a given key.
