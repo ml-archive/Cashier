@@ -34,7 +34,7 @@ static NSString * const kPropertiesKey = @"Properties";
         self.persistent = YES;
         self.returnsExpiredData = YES;
         
-#ifndef TARGET_OS_WATCH
+#if SUPPORTS_MEMORY_WARNING
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(emptyCache) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
 #endif
     }
@@ -53,7 +53,7 @@ static NSString * const kPropertiesKey = @"Properties";
 - (void)dealloc
 {
     [self removeKVO];
-#ifndef TARGET_OS_WATCH
+#if SUPPORTS_MEMORY_WARNING
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
 #endif
 }
