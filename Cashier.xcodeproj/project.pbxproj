@@ -764,6 +764,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Cashier/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.cashier;
 				PRODUCT_NAME = Cashier;
 				SDKROOT = appletvos;
@@ -785,6 +786,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Cashier/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.cashier;
 				PRODUCT_NAME = Cashier;
 				SDKROOT = appletvos;
@@ -832,6 +834,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Cashier/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier;
 				PRODUCT_NAME = Cashier;
 				SDKROOT = watchos;
@@ -853,6 +856,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Cashier/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier;
 				PRODUCT_NAME = Cashier;
 				SDKROOT = watchos;
@@ -878,6 +882,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier;
 				PRODUCT_NAME = Cashier;
 				SDKROOT = macosx;
@@ -901,6 +906,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier;
 				PRODUCT_NAME = Cashier;
 				SDKROOT = macosx;
