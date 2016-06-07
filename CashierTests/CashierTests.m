@@ -162,7 +162,7 @@
     [cashier deleteObjectForKey:arrayKey];
     NSArray* noArrayFromCache = [cashier objectForKey:arrayKey];
     XCTAssertNil(noArrayFromCache);
-    
+#if TARGET_OS_IPHONE
     UIImage* imageToCache = [UIImage imageNamed:@"Nodes" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil];
     XCTAssertNotNil(imageToCache);
     NSString* imageKey = @"imageKey";
@@ -178,6 +178,7 @@
     [cashier deleteObjectForKey:imageKey];
     UIImage* noImageFromCache = [cashier objectForKey:imageKey];
     XCTAssertNil(noImageFromCache);
+#endif
     
 }
 
@@ -200,12 +201,12 @@
     NSArray* arrayToCache = [[NSArray alloc] initWithObjects:@"this", @"will", @"be", @"cached", nil];
     NSString* arrayKey = @"arrayKey";
     [cashier setObject:arrayToCache forKey:arrayKey];
-    
+#if TARGET_OS_IPHONE
     UIImage* imageToCache = [UIImage imageNamed:@"Nodes" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil];
     XCTAssertNotNil(imageToCache);
     NSString* imageKey = @"imageKey";
     [cashier setImage:imageToCache forKey:imageKey];
-    
+#endif
     
     [cashier clearAllData];
     
@@ -228,10 +229,11 @@
     XCTAssertFalse([cashier objectForKeyIsValid:arrayKey]);
     XCTAssertNil(noArrayFromCache);
     
+#if TARGET_OS_IPHONE
     UIImage* noImageFromCache = [cashier objectForKey:imageKey];
     XCTAssertFalse([cashier objectForKeyIsValid:imageKey]);
     XCTAssertNil(noImageFromCache);
-
+#endif
     
 }
 
@@ -276,7 +278,7 @@
     [self waitForExpectationsWithTimeout:1 handler:nil];
     
 }
-
+#if TARGET_OS_IPHONE
 - (void)testMemoryCacheClearsOnMemoryWarning {
     Cashier* cashier = Cashier.defaultCache;
     cashier.persistent = NO;
@@ -292,7 +294,7 @@
     XCTAssertNil([cashier objectForKey:stringKey]);
     
 }
-
+#endif
 
 - (void)testCachePersistsOnVersionUpdates {
     NSString* cacheID = @"szl_cacheID1";
@@ -352,10 +354,10 @@
     [cashier setObject: stringToCache forKey:stringKey];
     NSString* stringFromCache = [cashier objectForKey:stringKey];
     XCTAssertEqual(stringFromCache, stringToCache);
-    
+#if TARGET_OS_IPHONE
     // forcing cache to clear memory cache
     [[NSNotificationCenter defaultCenter] postNotificationName:UIApplicationDidReceiveMemoryWarningNotification object:nil];
-    
+#endif
     XCTAssertNotNil([cashier objectForKey:stringKey]);
     XCTAssertTrue([stringToCache isEqualToString:[cashier objectForKey:stringKey]]);
     
