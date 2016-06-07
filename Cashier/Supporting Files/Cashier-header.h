@@ -6,7 +6,6 @@
 //  Copyright © 2016 Nodes. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "Cashier.h"
 #import "NOPersistentStore.h"
 //! Project version number for Cashier.
