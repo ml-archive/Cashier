@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01CD3F8D1D06F1510044887E /* Cashier-header.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D731C6A315E0098F620 /* Cashier-header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01CD3F8E1D06F1670044887E /* Cashier-header.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D731C6A315E0098F620 /* Cashier-header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01CD3F8F1D06F16F0044887E /* Cashier-header.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D731C6A315E0098F620 /* Cashier-header.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		272F1D741C6A315E0098F620 /* Cashier-header.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D731C6A315E0098F620 /* Cashier-header.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		272F1D7B1C6A315E0098F620 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F1D701C6A315E0098F620 /* Cashier.framework */; };
 		272F1D801C6A315E0098F620 /* CashierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D7F1C6A315E0098F620 /* CashierTests.m */; };
@@ -20,24 +23,24 @@
 		293EEB421C9719E3003A4819 /* NSBundle+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 293EEB411C9719E3003A4819 /* NSBundle+Swizzle.m */; };
 		293EEB451C97235C003A4819 /* NSMutableDictionary+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 293EEB441C97235C003A4819 /* NSMutableDictionary+Swizzle.m */; };
 		8353E0201D058BCF0074CC07 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8353E0161D058BCE0074CC07 /* Cashier.framework */; };
-		8353E02D1D058C1F0074CC07 /* Cashier.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8A1C6A31BC0098F620 /* Cashier.h */; };
+		8353E02D1D058C1F0074CC07 /* Cashier.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8A1C6A31BC0098F620 /* Cashier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8353E02E1D058C1F0074CC07 /* Cashier.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D8B1C6A31BC0098F620 /* Cashier.m */; };
 		8353E02F1D058C1F0074CC07 /* NSString+MD5Addition.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8E1C6A31C50098F620 /* NSString+MD5Addition.h */; };
 		8353E0301D058C1F0074CC07 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D8F1C6A31C50098F620 /* NSString+MD5Addition.m */; };
-		8353E0311D058C1F0074CC07 /* NOPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D921C6A31CD0098F620 /* NOPersistentStore.h */; };
+		8353E0311D058C1F0074CC07 /* NOPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D921C6A31CD0098F620 /* NOPersistentStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8353E0321D058C1F0074CC07 /* NOPersistentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D931C6A31CD0098F620 /* NOPersistentStore.m */; };
 		8353E04F1D058C750074CC07 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8353E0451D058C750074CC07 /* Cashier.framework */; };
-		8353E05C1D058D020074CC07 /* Cashier.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8A1C6A31BC0098F620 /* Cashier.h */; };
+		8353E05C1D058D020074CC07 /* Cashier.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8A1C6A31BC0098F620 /* Cashier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8353E05D1D058D020074CC07 /* Cashier.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D8B1C6A31BC0098F620 /* Cashier.m */; };
 		8353E05E1D058D020074CC07 /* NSString+MD5Addition.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8E1C6A31C50098F620 /* NSString+MD5Addition.h */; };
 		8353E05F1D058D020074CC07 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D8F1C6A31C50098F620 /* NSString+MD5Addition.m */; };
-		8353E0601D058D020074CC07 /* NOPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D921C6A31CD0098F620 /* NOPersistentStore.h */; };
+		8353E0601D058D020074CC07 /* NOPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D921C6A31CD0098F620 /* NOPersistentStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8353E0611D058D020074CC07 /* NOPersistentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D931C6A31CD0098F620 /* NOPersistentStore.m */; };
-		8353E0621D058D030074CC07 /* Cashier.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8A1C6A31BC0098F620 /* Cashier.h */; };
+		8353E0621D058D030074CC07 /* Cashier.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8A1C6A31BC0098F620 /* Cashier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8353E0631D058D030074CC07 /* Cashier.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D8B1C6A31BC0098F620 /* Cashier.m */; };
 		8353E0641D058D030074CC07 /* NSString+MD5Addition.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8E1C6A31C50098F620 /* NSString+MD5Addition.h */; };
 		8353E0651D058D030074CC07 /* NSString+MD5Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D8F1C6A31C50098F620 /* NSString+MD5Addition.m */; };
-		8353E0661D058D030074CC07 /* NOPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D921C6A31CD0098F620 /* NOPersistentStore.h */; };
+		8353E0661D058D030074CC07 /* NOPersistentStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D921C6A31CD0098F620 /* NOPersistentStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8353E0671D058D030074CC07 /* NOPersistentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D931C6A31CD0098F620 /* NOPersistentStore.m */; };
 		8353E0681D0590170074CC07 /* Nodes.png in Resources */ = {isa = PBXBuildFile; fileRef = 293EEB3E1C93011E003A4819 /* Nodes.png */; };
 		8353E0691D0590170074CC07 /* CashierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D7F1C6A315E0098F620 /* CashierTests.m */; };
@@ -242,9 +245,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CD3F8D1D06F1510044887E /* Cashier-header.h in Headers */,
 				8353E0311D058C1F0074CC07 /* NOPersistentStore.h in Headers */,
-				8353E02F1D058C1F0074CC07 /* NSString+MD5Addition.h in Headers */,
 				8353E02D1D058C1F0074CC07 /* Cashier.h in Headers */,
+				8353E02F1D058C1F0074CC07 /* NSString+MD5Addition.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,9 +256,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CD3F8F1D06F16F0044887E /* Cashier-header.h in Headers */,
 				8353E0661D058D030074CC07 /* NOPersistentStore.h in Headers */,
-				8353E0641D058D030074CC07 /* NSString+MD5Addition.h in Headers */,
 				8353E0621D058D030074CC07 /* Cashier.h in Headers */,
+				8353E0641D058D030074CC07 /* NSString+MD5Addition.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +267,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01CD3F8E1D06F1670044887E /* Cashier-header.h in Headers */,
 				8353E0601D058D020074CC07 /* NOPersistentStore.h in Headers */,
-				8353E05E1D058D020074CC07 /* NSString+MD5Addition.h in Headers */,
 				8353E05C1D058D020074CC07 /* Cashier.h in Headers */,
+				8353E05E1D058D020074CC07 /* NSString+MD5Addition.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,6 +975,7 @@
 				8353E0291D058BCF0074CC07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8353E02A1D058BCF0074CC07 /* Build configuration list for PBXNativeTarget "Cashier tvOSTests" */ = {
 			isa = XCConfigurationList;
@@ -977,6 +984,7 @@
 				8353E02C1D058BCF0074CC07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8353E03D1D058C6A0074CC07 /* Build configuration list for PBXNativeTarget "Cashier watchOS" */ = {
 			isa = XCConfigurationList;
@@ -985,6 +993,7 @@
 				8353E03F1D058C6A0074CC07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8353E0561D058C750074CC07 /* Build configuration list for PBXNativeTarget "Cashier OSX" */ = {
 			isa = XCConfigurationList;
@@ -993,6 +1002,7 @@
 				8353E0581D058C750074CC07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8353E0591D058C750074CC07 /* Build configuration list for PBXNativeTarget "Cashier OSXTests" */ = {
 			isa = XCConfigurationList;
@@ -1001,6 +1011,7 @@
 				8353E05B1D058C750074CC07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
