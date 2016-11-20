@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Cashier"
-  s.version      = "1.1.0"
+  s.version      = "1.2.0"
   s.summary      = "An easy to use 2-layered object cache for iOS."
 
   # This description is used to generate tags and improve search results.
