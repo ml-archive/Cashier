@@ -1,6 +1,6 @@
 //
-//  CICache.h
-//  CityGuides
+//  NOPersistentStore.h
+//  
 //
 //  Created by Jakob Mygind on 03/09/14.
 //  Copyright (c) 2014 Nodes. All rights reserved.
