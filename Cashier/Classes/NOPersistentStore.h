@@ -3,7 +3,7 @@
 //  CityGuides
 //
 //  Created by Jakob Mygind on 03/09/14.
-//  Copyright (c) 2014 Marcus Waring. All rights reserved.
+//  Copyright (c) 2014 Nodes. All rights reserved.
 //
 
 #import "Cashier.h"
