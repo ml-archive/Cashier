@@ -22,6 +22,8 @@
 		293EEB3F1C93011E003A4819 /* Nodes.png in Resources */ = {isa = PBXBuildFile; fileRef = 293EEB3E1C93011E003A4819 /* Nodes.png */; };
 		293EEB421C9719E3003A4819 /* NSBundle+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 293EEB411C9719E3003A4819 /* NSBundle+Swizzle.m */; };
 		293EEB451C97235C003A4819 /* NSMutableDictionary+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 293EEB441C97235C003A4819 /* NSMutableDictionary+Swizzle.m */; };
+		29B694B51E3520C5002D8EBD /* SwiftTypesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B694B41E3520C5002D8EBD /* SwiftTypesTests.swift */; };
+		29B694B71E352A67002D8EBD /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B694B61E352A67002D8EBD /* Song.swift */; };
 		8353E0201D058BCF0074CC07 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8353E0161D058BCE0074CC07 /* Cashier.framework */; };
 		8353E02D1D058C1F0074CC07 /* Cashier.h in Headers */ = {isa = PBXBuildFile; fileRef = 272F1D8A1C6A31BC0098F620 /* Cashier.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8353E02E1D058C1F0074CC07 /* Cashier.m in Sources */ = {isa = PBXBuildFile; fileRef = 272F1D8B1C6A31BC0098F620 /* Cashier.m */; };
@@ -95,6 +97,9 @@
 		293EEB411C9719E3003A4819 /* NSBundle+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Swizzle.m"; sourceTree = "<group>"; };
 		293EEB431C97235C003A4819 /* NSMutableDictionary+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Swizzle.h"; sourceTree = "<group>"; };
 		293EEB441C97235C003A4819 /* NSMutableDictionary+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Swizzle.m"; sourceTree = "<group>"; };
+		29B694B31E3520C5002D8EBD /* CashierTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CashierTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		29B694B41E3520C5002D8EBD /* SwiftTypesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftTypesTests.swift; sourceTree = "<group>"; };
+		29B694B61E352A67002D8EBD /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		8353E0161D058BCE0074CC07 /* Cashier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cashier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8353E01F1D058BCF0074CC07 /* Cashier tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cashier tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8353E0381D058C6A0074CC07 /* Cashier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cashier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +205,9 @@
 				293EEB411C9719E3003A4819 /* NSBundle+Swizzle.m */,
 				293EEB431C97235C003A4819 /* NSMutableDictionary+Swizzle.h */,
 				293EEB441C97235C003A4819 /* NSMutableDictionary+Swizzle.m */,
+				29B694B41E3520C5002D8EBD /* SwiftTypesTests.swift */,
+				29B694B31E3520C5002D8EBD /* CashierTests-Bridging-Header.h */,
+				29B694B61E352A67002D8EBD /* Song.swift */,
 			);
 			path = CashierTests;
 			sourceTree = "<group>";
@@ -418,6 +426,7 @@
 					};
 					272F1D791C6A315E0098F620 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0820;
 					};
 					8353E0151D058BCE0074CC07 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -530,8 +539,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				293EEB451C97235C003A4819 /* NSMutableDictionary+Swizzle.m in Sources */,
+				29B694B51E3520C5002D8EBD /* SwiftTypesTests.swift in Sources */,
 				272F1D801C6A315E0098F620 /* CashierTests.m in Sources */,
 				293EEB421C9719E3003A4819 /* NSBundle+Swizzle.m in Sources */,
+				29B694B71E352A67002D8EBD /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +662,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "CashierTests-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -695,6 +707,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "CashierTests-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -748,20 +761,27 @@
 		272F1D881C6A315E0098F620 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CashierTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.CashierTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CashierTests/CashierTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		272F1D891C6A315E0098F620 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CashierTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.CashierTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CashierTests/CashierTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
