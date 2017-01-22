@@ -22,7 +22,7 @@ class SwiftTypesTests: XCTestCase {
     }
     
     func testStoringSwiftTypesInDefaultCache() {
-        let cache : Cashier! = Cashier.defaultCache()
+        let cache : Cashier! = Cashier.cache(withId: "bestCacheId")
         
         let double : Double = 2.0
         cache.setObject(double, forKey: "double")
@@ -115,7 +115,7 @@ class SwiftTypesTests: XCTestCase {
     }
     
     func testStoringSwiftTypesInPersistentStore() {
-        let cache : NOPersistentStore! = NOPersistentStore.defaultCache()
+        let cache : NOPersistentStore! = NOPersistentStore.cache(withId: "bestPersistentStoreId")
         
         let double : Double = 2.0
         cache.setObject(double, forKey: "double")
