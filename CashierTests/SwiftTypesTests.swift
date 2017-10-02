@@ -8,6 +8,7 @@
 
 import XCTest
 import Cashier
+import UIKit
 
 class SwiftTypesTests: XCTestCase {
     
@@ -112,6 +113,21 @@ class SwiftTypesTests: XCTestCase {
             XCTFail()
         }
         
+        let image : UIImage! = UIImage(named: "Nodes", in: Bundle(for: type(of: self)), compatibleWith: nil)
+        cache.setImage(image, forKey: "image")
+        if let cachedImage = cache.image(forKey: "image") {
+            XCTAssert(cachedImage == image)
+        } else {
+            XCTFail()
+        }
+        
+        let data : Data! = string.data(using: .utf8)
+        cache.setData(data, forKey: "data")
+        if let cachedData = cache.data(forKey: "data") {
+            XCTAssert(cachedData == data)
+        } else {
+            XCTFail()
+        }
     }
     
     func testStoringSwiftTypesInPersistentStore() {
@@ -205,7 +221,21 @@ class SwiftTypesTests: XCTestCase {
             XCTFail()
         }
         
+        let image : UIImage! = UIImage(named: "Nodes", in: Bundle(for: type(of: self)), compatibleWith: nil)
+        cache.setImage(image, forKey: "image")
+        if let cachedImage = cache.image(forKey: "image") {
+            XCTAssert(cachedImage == image)
+        } else {
+            XCTFail()
+        }
         
+        let data : Data! = string.data(using: .utf8)
+        cache.setData(data, forKey: "data")
+        if let cachedData = cache.data(forKey: "data") {
+            XCTAssert(cachedData == data)
+        } else {
+            XCTFail()
+        }
     }
     
 }
