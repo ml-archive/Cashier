@@ -35,7 +35,7 @@ pod 'Cashier', '~> 1.0.1'
 *Swift*
 ```swift
 // Create a Cashier object with id "cacheID".
-let cashier: Cashier = Cashier.cache(withId: "bestCacheId")
+let cashier: Cashier = Cashier.cache(withId: "cacheID")
 
 // Create a Cashier object the default cache.
 let cashier: Cashier = Cashier.defaultCache()
@@ -80,7 +80,7 @@ NSString* stringFromCache = [cashier objectForKey: @"stringCacheKey"];
 #### Caching NSData in a Cashier object
 *Swift*
 ```swift
-// Get or create a Cashier object with id "stringCache".
+// Get or create a Cashier object with id "dataCache".
 let cashier: Cashier = Cashier.cache(withId: "dataCache")
 
 // Add an object to the cache.
@@ -298,6 +298,7 @@ cashier.lifespan = 60;
 
 //	Makes the cache return cached objects after their lifespan has passed.
 cashier.returnsExpiredData = YES;
+
 YourObject *yourObject = [[YourObject alloc] init];
 [cashier setObject: yourObject forKey:@"cacheKey"];
 
@@ -320,9 +321,6 @@ let cashier: Cashier = Cashier.cache(withId: "cacheID")
 // Makes the cached objects have a lifespan of one minute.
 cashier.lifespan = 60
 
-// Makes the cache return cached objects after their lifespan has passed.
-cashier.returnsExpiredData = true
-
 let yourObject: YourObject = YourObject()
 cashier.setObject(yourObject, forKey: "cacheKey")
 
@@ -343,6 +341,7 @@ Cashier* cashier = [Cashier cacheWithId:@"cacheID"];
 
 // Makes the cached objects have a lifespan of one minute.
 cashier.lifespan = 60;
+
 YourObject *yourObject = [[YourObject alloc] init];
 [cashier setObject: yourObject forKey:@"cacheKey"];
 
