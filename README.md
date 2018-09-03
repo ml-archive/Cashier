@@ -5,6 +5,7 @@
 Cashier is a caching framework that makes it easy to work with persistent data.
 
 [![Build Status](https://travis-ci.org/nodes-ios/Cashier.svg?branch=master)](https://travis-ci.org/nodes-ios/Cashier)
+[![CircleCI](https://circleci.com/gh/nodes-ios/Cashier.svg?style=shield)](https://circleci.com/gh/nodes-ios/Cashier)
 [![Codecov](https://img.shields.io/codecov/c/github/nodes-ios/Cashier.svg)](https://codecov.io/github/nodes-ios/Cashier)
 [![CocoaPods](https://img.shields.io/cocoapods/v/Cashier.svg)](https://cocoapods.org/pods/Cashier)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
