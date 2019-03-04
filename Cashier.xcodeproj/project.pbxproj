@@ -730,6 +730,7 @@
 				);
 				INFOPLIST_FILE = "Cashier/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier;
@@ -750,6 +751,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "SUPPORTS_MEMORY_WARNING=1";
 				INFOPLIST_FILE = "Cashier/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier;
