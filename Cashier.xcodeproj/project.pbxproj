@@ -452,6 +452,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 272F1D661C6A315E0098F620;
@@ -828,7 +829,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.cashier;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier.tvOS;
 				PRODUCT_NAME = Cashier;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -852,7 +853,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.cashier;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier.tvOS;
 				PRODUCT_NAME = Cashier;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -903,7 +904,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier.watchOS;
 				PRODUCT_NAME = Cashier;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -926,7 +927,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier.watchOS;
 				PRODUCT_NAME = Cashier;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
