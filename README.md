@@ -296,7 +296,7 @@ Cashier* cashier = [Cashier cacheWithId:@"cacheID"];
 // Makes the cached objects have a lifespan of one minute.
 cashier.lifespan = 60;
 
-//	Makes the cache return cached objects after their lifespan has passed.
+// Makes the cache return cached objects after their lifespan has passed.
 cashier.returnsExpiredData = YES;
 
 YourObject *yourObject = [[YourObject alloc] init];
