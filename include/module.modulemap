@@ -1,0 +1,6 @@
+module Cashier {
+    umbrella header "Cashier.h"
+    
+    export *
+    module * { export * }
+}

@@ -105,6 +105,7 @@
 		8353E0381D058C6A0074CC07 /* Cashier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cashier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8353E0451D058C750074CC07 /* Cashier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cashier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8353E04E1D058C750074CC07 /* Cashier OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cashier OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C4C8BD2537445100FF8C27 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +167,7 @@
 		272F1D661C6A315E0098F620 = {
 			isa = PBXGroup;
 			children = (
+				A5C4C8BD2537445100FF8C27 /* Package.swift */,
 				272F1D721C6A315E0098F620 /* Cashier */,
 				272F1D7E1C6A315E0098F620 /* CashierTests */,
 				272F1D711C6A315E0098F620 /* Products */,
@@ -752,6 +754,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 2.0.2;
 				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier;
 				PRODUCT_NAME = Cashier;
@@ -773,6 +776,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 2.0.2;
 				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier;
 				PRODUCT_NAME = Cashier;
@@ -828,6 +832,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Cashier/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 2.0.2;
 				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier.tvOS;
 				PRODUCT_NAME = Cashier;
@@ -852,6 +857,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Cashier/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 2.0.2;
 				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier.tvOS;
 				PRODUCT_NAME = Cashier;
@@ -903,6 +909,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Cashier/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 2.0.2;
 				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier.watchOS;
 				PRODUCT_NAME = Cashier;
@@ -926,6 +933,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Cashier/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 2.0.2;
 				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier.watchOS;
 				PRODUCT_NAME = Cashier;
@@ -951,7 +959,8 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Cashier/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MARKETING_VERSION = 2.0.2;
 				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier;
 				PRODUCT_NAME = Cashier;
@@ -975,7 +984,8 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Cashier/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MARKETING_VERSION = 2.0.2;
 				MODULEMAP_FILE = "Cashier/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nodes.Cashier;
 				PRODUCT_NAME = Cashier;
